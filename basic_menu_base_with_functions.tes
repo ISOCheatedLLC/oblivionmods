@@ -1,0 +1,1020 @@
+scn CheatBoxScript
+
+short Choice
+short currentMenu
+Begin OnActivate
+set currentMenu to -1
+End
+
+Begin GameMode
+if (currentMenu == -1) 
+	MessageBox "Cheatbox | Main Menu" "Clothing" "Ingredients" "Potions" "Armor" "Weapons" "Other Cheats" "Pick Up" "Exit" "Exit Game" 
+	set currentMenu to 1
+endif
+if (currentMenu == -2) 
+	MessageBox "Clothing" "Terrible Outfit" "Alright Outfit" "Cool Outfit" "Cooler Outfit" "Awesome Outfit" "Incrediblicious Outfit" "Insane Outfit" "Ludicrous Outfit" "Main Menu" 
+	set currentMenu to 2
+endif
+if (currentMenu == -3) 
+	MessageBox "Ingredients" "One Ingredients" "Two Ingredients" "Three Ingredients" "Four" "Five Ingredients" "Six Ingredients" "Seven Ingredients" "More" "Main Menu" 
+	set currentMenu to 3
+endif
+if (currentMenu == -4) 
+	MessageBox "Potions" "Health" "Magicka" "Poisons" "Other" "Main Menu" 
+	set currentMenu to 4
+endif
+if (currentMenu == -5) 
+	MessageBox "Armor" "Iron" "Leather" "Steel" "Main Menu" 
+	set currentMenu to 5
+endif
+if (currentMenu == -6) 
+	MessageBox "Weapons" "Iron" "Fine Iron" "Steel" "Fine Steel" "Ranged/Ammo" "Main Menu" 
+	set currentMenu to 6
+endif
+if (currentMenu == -7) 
+	MessageBox "Other Cheats" "Free 5000 Septims" "Super Ultimate Over-Poweredness" "Fly like an Eagle (ONLY USE OUTSIDE)" "Main Menu" 
+	set currentMenu to 7
+endif
+if (currentMenu == -8) 
+	MessageBox "Health Potions" "Weak Restore Potion" "Restore Potion" "Strong Restore Potion" "Weak Fortify Potion" "Fortify Potion" "Strong Fortify Potion" "Back" "Main Menu" 
+	set currentMenu to 8
+endif
+if (currentMenu == -9) 
+	MessageBox "Magicka Potions" "Weak Restore Potion" "Restore Potion" "Strong Restore Potion" "Weak Fortify Potion" "Fortify Potion" "Strong Fortify Potion" "Back" "Main Menu" 
+	set currentMenu to 9
+endif
+if (currentMenu == -10) 
+	MessageBox "Poisons page 1" "Burden" "Clumsiness" "Affliction" "Confusion" "Misfortune" "Poison of the Fool" "Page 2 >" "Back" "Main Menu" 
+	set currentMenu to 10
+endif
+if (currentMenu == -11) 
+	MessageBox "Poisons page 2" "Poison of Slowing" "Weakness" "Fright" "Fatigue" "Illness" "Severing" "< Page 1" "Back" "Main Menu" 
+	set currentMenu to 11
+endif
+if (currentMenu == -12) 
+	MessageBox "Other Potions page 1" "Detect Life" "Dispel" "Feather" "Fire Shield" "Luck" "Severing" "Page 2 >" "Back" "Main Menu" 
+	set currentMenu to 12
+endif
+if (currentMenu == -13) 
+	MessageBox "Other Potions page 2" "Agility" "Endurance" "Intelligence" "Personality" "Speed" "Strength" "< Page 1" "Back" "Main Menu" 
+	set currentMenu to 13
+endif
+if (currentMenu == -14) 
+	MessageBox "Iron Armor" "Boots" "Cuirass" "Gauntlets" "Greaves" "Helmet" "Shield" "Back" "Main Menu" 
+	set currentMenu to 14
+endif
+if (currentMenu == -15) 
+	MessageBox "Leather Armor" "Boots" "Cuirass" "Gauntlets" "Greaves" "Helmet" "Shield" "Back" "Main Menu" 
+	set currentMenu to 15
+endif
+if (currentMenu == -16) 
+	MessageBox "Steel Armor" "Boots" "Cuirass" "Gauntlets" "Greaves" "Helmet" "Shield" "Back" "Main Menu" 
+	set currentMenu to 16
+endif
+if (currentMenu == -17) 
+	MessageBox "Iron Weapons" "Battle Axe" "War Axe" "Claymore" "Dagger" "Longsword" "Mace" "Shortsword" "War Hammer" "Back" 
+	set currentMenu to 17
+endif
+if (currentMenu == -18) 
+	MessageBox "Fine Iron Weapons" "Battle Axe" "War Axe" "Claymore" "Dagger" "Longsword" "Mace" "Shortsword" "War Hammer" "Back" 
+	set currentMenu to 18
+endif
+if (currentMenu == -19) 
+	MessageBox "Steel Weapons" "Battle Axe" "War Axe" "Claymore" "Dagger" "Longsword" "Mace" "Shortsword" "War Hammer" "Back" 
+	set currentMenu to 19
+endif
+if (currentMenu == -20) 
+	MessageBox "Fine Steel Weapons" "Battle Axe" "War Axe" "Claymore" "Dagger" "Longsword" "Mace" "Shortsword" "War Hammer" "Back" 
+	set currentMenu to 20
+endif
+if (currentMenu == -21) 
+	MessageBox "Ranged Weapons/Ammo" "Iron Bow" "Fine Iron Bow" "Steel Bow" "Fine Steel Bow" "Silver Bow" "Steel Arrow" "Silver Arrow" "Elven Arrow" "Back" 
+	set currentMenu to 21
+endif
+
+if currentMenu > 0 && Choice == -1
+	set Choice to GetButtonPressed
+endif
+
+if (currentMenu == 1)
+
+	if (Choice == 0)
+	set Choice to -1
+	set currentMenu to -2	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	set currentMenu to -3	
+	elseif (Choice == 2)
+	set Choice to -1
+	set currentMenu to -4	
+	elseif (Choice == 3)
+	set Choice to -1
+	set currentMenu to -5	
+	elseif (Choice == 4)
+	set Choice to -1
+	set currentMenu to -6	
+	elseif (Choice == 5)
+	set Choice to -1
+	set currentMenu to -7	
+	elseif (Choice == 6)
+	set Choice to -1
+	Activate
+	set currentMenu to -1
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to 0
+
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	player.disable
+	set currentMenu to -1
+	
+	endif
+endif 
+if (currentMenu == 2)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem JailPants 1
+				player.AddItem JailShirt 1
+				player.AddItem JailShoes 1
+	set currentMenu to -2
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem LowerPants01 1
+				player.AddItem LowerShirt01 1
+				player.AddItem LowerShoes01 1
+	set currentMenu to -2
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem LowerPants02 1
+				player.AddItem LowerShirt02 1
+				player.AddItem LowerShoes02 1
+	set currentMenu to -2
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem LowerPants03 1
+				player.AddItem LowerShirt03 1
+				player.AddItem LowerShoes03 1
+	set currentMenu to -2
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem LowerPants04 1
+				player.AddItem LowerShirt04 1
+				player.AddItem LowerShoes04 1
+	set currentMenu to -2
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem LowerPants05 1
+				player.AddItem LowerShirt05 1
+				player.AddItem LowerShoes05 1
+	set currentMenu to -2
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	player.AddItem LowerPants06 1
+				player.AddItem LowerShirt06 1
+				player.AddItem LowerShoes06 1
+	set currentMenu to -2
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	player.AddItem LowerPants07 1
+				player.AddItem LowerShirt07 1
+				player.AddItem LowerShoes07 1
+	set currentMenu to -2
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 3)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem Beef 1
+	set currentMenu to -3
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem Corn 1
+				player.AddItem Carrot 1
+	set currentMenu to -3
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem DreughWax 1
+				player.AddItem CrabMeat 1
+				player.AddItem ElfCupCap 1
+	set currentMenu to -3
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem EmeticRussulaCap 1
+				player.AddItem FennelSeeds 1
+				player.AddItem FireSalts 1
+				player.AddItem Flour 1
+	set currentMenu to -3
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem FlyAmanitaCap 1
+				player.AddItem FoxgloveNectar 1
+				player.AddItem FrostSalts 1
+				player.AddItem Garlic 1
+				player.AddItem GinkgoLeaf 1
+	set currentMenu to -3
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem Ginseng 1
+				player.AddItem GlowDust 1
+				player.AddItem GoldenRodSeedPod 1
+				player.AddItem Grapes 1
+				player.AddItem GreenStainCupCap 1
+				player.AddItem GreenStainShelfCap 1
+	set currentMenu to -3
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	player.AddItem Ham 1
+				player.AddItem Harrada 1
+				player.AddItem HumanHeart 1
+				player.AddItem ImpGall 1
+				player.AddItem IronwoodNut 1
+				player.AddItem LadysMantleLeaves 1
+				player.AddItem LadysSmockLeaves 1
+	set currentMenu to -3
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	player.AddItem LavenderSprig 1
+				player.AddItem Leek 1
+				player.AddItem Lettuce 1
+				player.AddItem Lichor 1
+				player.AddItem MandrakeRoot 1
+				player.AddItem MilkThistleSeeds 1
+				player.AddItem MinotaurHorn 1
+				player.AddItem MonkshoodRootPulp 1
+				player.AddItem MorningGloryRootPulp 1
+				player.AddItem MortFlesh 1
+				player.AddItem MotherwortSprig 1
+				player.AddItem Mutton 1
+				player.AddItem Nightshade 1
+				player.AddItem OgresTeeth 1
+				player.AddItem Onion 1
+				player.AddItem MS39Nirnroot 1
+	set currentMenu to -3
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 4)
+
+	if (Choice == 0)
+	set Choice to -1
+	set currentMenu to -8	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	set currentMenu to -9	
+	elseif (Choice == 2)
+	set Choice to -1
+	set currentMenu to -10	
+	elseif (Choice == 3)
+	set Choice to -1
+	set currentMenu to -12	
+	elseif (Choice == 4)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 5)
+
+	if (Choice == 0)
+	set Choice to -1
+	set currentMenu to -14	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	set currentMenu to -15	
+	elseif (Choice == 2)
+	set Choice to -1
+	set currentMenu to -16	
+	elseif (Choice == 3)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 6)
+
+	if (Choice == 0)
+	set Choice to -1
+	set currentMenu to -17	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	set currentMenu to -18	
+	elseif (Choice == 2)
+	set Choice to -1
+	set currentMenu to -19	
+	elseif (Choice == 3)
+	set Choice to -1
+	set currentMenu to -20	
+	elseif (Choice == 4)
+	set Choice to -1
+	set currentMenu to -21	
+	elseif (Choice == 5)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 7)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem Gold001 5000
+	set currentMenu to -7
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+				player.SetAV speed 100
+				player.SetAV Acrobatics 255
+				player.SetAV Strength 255
+				player.SetAV Blade 255
+				player.SetAV Blunt 255
+				player.SetAV Health 255
+				player.SetAV Intelligence 255
+				player.SetAV Willpower 255
+				player.SetAV Fatigue 255
+				player.SetAV Magicka 255
+				player.SetAV Mercantile 255
+				player.SetAV Speechcraft 255
+				player.SetAV Alteration 255
+				player.SetAV Destruction 255
+				player.SetAV Alchemy 255
+				player.SetAV Armorer 255
+				player.SetAV HandtoHand 255
+				player.SetAV LightArmor 255
+				player.SetAV HeavyArmor 255
+				player.SetAV Marksman 255
+				player.SetAV Security 255
+				player.SetAV Sneak 255
+				player.SetAV Personality 255
+				player.SetAV Block 255
+				player.SetAV Conjuration 255
+				player.SetAV Mysticism 255
+				player.SetAV Restoration 255
+				player.SetAV Agility 255
+				player.SetAV Endurance 255
+	set currentMenu to -7
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	float goUp
+	set goUp to ((player.GetPos z) + 1000)
+	player.SetPos z, goUp
+	set currentMenu to 0
+
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 8)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem PotionRestoreHealthW 1
+	set currentMenu to -8
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem PotionRestoreHealth 1
+	set currentMenu to -8
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem PotionRestoreHealthS 1
+	set currentMenu to -8
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem PotionFortifyHealthW 1
+	set currentMenu to -8
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem PotionFortifyHealth 1
+	set currentMenu to -8
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem PotionFortifyHealthS 1
+	set currentMenu to -8
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -4	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 9)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem PotionRestoreMagickaW 1
+	set currentMenu to -9
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem PotionRestoreMagicka 1
+	set currentMenu to -9
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem PotionRestoreMagickaS 1
+	set currentMenu to -9
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem PotionFortifyMagickaW 1
+	set currentMenu to -9
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem PotionFortifyMagicka 1
+	set currentMenu to -9
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem PotionFortifyMagickaS 1
+	set currentMenu to -9
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -4	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 10)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem PotionBurden 1
+	set currentMenu to -10
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem PotionDamageAttrAgility 1
+	set currentMenu to -10
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem PotionDamageAttrEndurance 1
+	set currentMenu to -10
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem PotionDamageAttrIntelligence 1
+	set currentMenu to -10
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem PotionDamageAttrLuck 1
+	set currentMenu to -10
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem PotionDamageAttrPersonality 1
+	set currentMenu to -10
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -11	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -4	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 11)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem PotionDamageAttrSpeed 1
+	set currentMenu to -11
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem PotionDamageAttrStrength 1
+	set currentMenu to -11
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem PotionDamageAttrWillpower 1
+	set currentMenu to -11
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem PotionDamageFatigue 1
+	set currentMenu to -11
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem PotionDamageHealth 1
+	set currentMenu to -11
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem PotionDamageMagicka 1
+	set currentMenu to -11
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -10	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -4	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 12)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem PotionDetectLife 1
+	set currentMenu to -12
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem PotionDispel 1
+	set currentMenu to -12
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem PotionFeather 1
+	set currentMenu to -12
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem PotionFireShield 1
+	set currentMenu to -12
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem PotionFortifyLuck 1
+	set currentMenu to -12
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem PotionDamageMagicka 1
+	set currentMenu to -12
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -13	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -4	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 13)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem PotionFortifyAgility 1
+	set currentMenu to -13
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem PotionFortifyEndurance 1
+	set currentMenu to -13
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem PotionFortifyIntelligence 1
+	set currentMenu to -13
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem PotionFortifyPersonality 1
+	set currentMenu to -13
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem PotionFortifySpeed 1
+	set currentMenu to -13
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem PotionFortifyStrength 1
+	set currentMenu to -13
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -12	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -4	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 14)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem IronBoots 1
+	set currentMenu to -14
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem IronCuirass 1
+	set currentMenu to -14
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem IronGauntlets 1
+	set currentMenu to -14
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem IronGreaves 1
+	set currentMenu to -14
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem IronHelmet 1
+	set currentMenu to -14
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem IronShield 1
+	set currentMenu to -14
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -5	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 15)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem LeatherBoots 1
+	set currentMenu to -15
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem LeatherCuirass 1
+	set currentMenu to -15
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem LeatherGauntlets 1
+	set currentMenu to -15
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem LeatherGreaves 1
+	set currentMenu to -15
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem LeatherHelmet 1
+	set currentMenu to -15
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem LeatherShield 1
+	set currentMenu to -15
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -5	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 16)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem SteelBoots 1
+	set currentMenu to -16
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem SteelCuirass 1
+	set currentMenu to -16
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem SteelGauntlets 1
+	set currentMenu to -16
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem SteelGreaves 1
+	set currentMenu to -16
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem SteelHelmet 1
+	set currentMenu to -16
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem SteelShield 1
+	set currentMenu to -16
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	set currentMenu to -5	
+	elseif (Choice == 7)
+	set Choice to -1
+	set currentMenu to -1	
+	endif
+endif 
+if (currentMenu == 17)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem WeapIronBattleAxe 1
+	set currentMenu to -17
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem WeapIronWarAxe 1
+	set currentMenu to -17
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem WeapIronClaymore 1
+	set currentMenu to -17
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem WeapIronDagger 1
+	set currentMenu to -17
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem WeapIronLongsword 1
+	set currentMenu to -17
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem WeapIronMace 1
+	set currentMenu to -17
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	player.AddItem WeapIronShortsword 1
+	set currentMenu to -17
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	player.AddItem WeapIronWarhammer 1
+	set currentMenu to -17
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -6	
+	endif
+endif 
+if (currentMenu == 18)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem WeapIronBattleAxeFine 1
+	set currentMenu to -18
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem WeapIronWarAxeFine 1
+	set currentMenu to -18
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem WeapIronClaymoreFine 1
+	set currentMenu to -18
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem WeapIronDaggerFine 1
+	set currentMenu to -18
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem WeapIronLongswordFine 1
+	set currentMenu to -18
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem WeapIronMaceFine 1
+	set currentMenu to -18
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	player.AddItem WeapIronShortswordFine 1
+	set currentMenu to -18
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	player.AddItem WeapIronWarhammerFine 1
+	set currentMenu to -18
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -6	
+	endif
+endif 
+if (currentMenu == 19)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem WeapSteelBattleAxe 1
+	set currentMenu to -19
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem WeapSteelWarAxe 1
+	set currentMenu to -19
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem WeapSteelClaymore 1
+	set currentMenu to -19
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem WeapSteelDagger 1
+	set currentMenu to -19
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem WeapSteelLongsword 1
+	set currentMenu to -19
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem WeapSteelMace 1
+	set currentMenu to -19
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	player.AddItem WeapSteelShortsword 1
+	set currentMenu to -19
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	player.AddItem WeapSteelWarhammer 1
+	set currentMenu to -19
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -6	
+	endif
+endif 
+if (currentMenu == 20)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem WeapSteelBattleAxeFine 1
+	set currentMenu to -20
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem WeapSteelWarAxeFine 1
+	set currentMenu to -20
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem WeapSteelClaymoreFine 1
+	set currentMenu to -20
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem WeapSteelDaggerFine 1
+	set currentMenu to -20
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem WeapSteelLongswordFine 1
+	set currentMenu to -20
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem WeapSteelMaceFine 1
+	set currentMenu to -20
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	player.AddItem WeapSteelShortswordFine 1
+	set currentMenu to -20
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	player.AddItem WeapSteelWarhammerFine 1
+	set currentMenu to -20
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -6	
+	endif
+endif 
+if (currentMenu == 21)
+
+	if (Choice == 0)
+	set Choice to -1
+	player.AddItem WeapIronBow 1
+	set currentMenu to -21
+	
+
+	elseif (Choice == 1)
+	set Choice to -1
+	player.AddItem WeapIronBowFine 1
+	set currentMenu to -21
+	
+	elseif (Choice == 2)
+	set Choice to -1
+	player.AddItem WeapSteelBow 1
+	set currentMenu to -21
+	
+	elseif (Choice == 3)
+	set Choice to -1
+	player.AddItem WeapSteelBowFine 1
+	set currentMenu to -21
+	
+	elseif (Choice == 4)
+	set Choice to -1
+	player.AddItem WeapSilverBow 1
+	set currentMenu to -21
+	
+	elseif (Choice == 5)
+	set Choice to -1
+	player.AddItem Arrow2Steel 1
+	set currentMenu to -21
+	
+	elseif (Choice == 6)
+	set Choice to -1
+	player.AddItem Arrow3Silver 1
+	set currentMenu to -21
+	
+	elseif (Choice == 7)
+	set Choice to -1
+	player.AddItem Arrow5Elven 1
+	set currentMenu to -21
+	
+	elseif (Choice == 8)
+	set Choice to -1
+	set currentMenu to -6	
+	endif
+endif 
+End
