@@ -1,5 +1,5 @@
 scn CheatBoxScript
-
+;basic menu base for oblivion, works really well, has submenus and functions. -ISOCheated
 short Choice
 short currentMenu
 Begin OnActivate
